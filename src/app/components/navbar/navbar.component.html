@@ -1,0 +1,70 @@
+<nav id="topnav" class="defaultscroll is-sticky bg-slate-900 h-20" (window:scroll)="windowScroll()">
+    <!-- !px-0 -->
+    <div class="container ">
+        <!-- Logo container-->
+        
+        <!-- <a *ngIf="navLight === true" class="logo" href="/">
+            <span class="inline-block dark:hidden">
+                <img src="assets/img/logo-mg-transparente.png" class="l-dark" height="24" alt="">
+                <img src="assets/img/logo-mg-transparente.png" class="l-light" height="24" alt="">
+            </span>
+            <img src="assets/img/logo-mg-transparente.png" height="24" class="hidden dark:inline-block" alt="">
+        </a> -->
+
+        <a *ngIf="!navLight2 === true" class="logo" routerLink="/">
+            <img src="assets/img/logo-mg-transparente.png" class="inline-block dark:hidden" width="150" alt="">
+            <img src="assets/img/logo-mg-transparente.png" class="hidden dark:inline-block" width="150" alt="">
+        </a>
+        <!-- End Logo container-->
+        
+        <!-- Start Mobile Toggle -->
+        <div class="menu-extras">
+            <div class="menu-item">
+                <a class="navbar-toggle" id="isToggle" (click)="toggleMenu()">
+                    <div class="lines">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- End Mobile Toggle -->
+
+        <!--Login button Start-->
+        <ul class="buy-button list-none mb-0">
+            <!-- <li class="inline mb-0">
+                <a routerLink="auth-login" class="btn btn-icon bg-green-600 hover:bg-green-700 border-green-600 dark:border-green-600 text-white rounded-full"><i data-feather="user" class="h-4 w-4 stroke-[3]"></i></a>
+            </li> -->
+            <li class="sm:inline ps-1 mb-0 hidden">
+                <a routerLink="auth-signup" class="btn bg-[#a5be00] hover:bg-lime-600 border-[#a5be00] text-white rounded-full">Contáctanos</a>
+            </li>
+        </ul>
+        <!--Login button End-->
+
+        <div id="navigation" [style]="status  ? 'display: block;' : 'display: none;'">
+            <!-- Navigation Menu-->   
+            <ul [class]="childMessage === 'true' ? 'navigation-menu justify-end nav-light' : 'navigation-menu justify-end'">
+                <li><a routerLink="/" class="sub-menu-item">Inicio</a></li>
+                <li><a routerLink="/nosotros" class="sub-menu-item">Nosotros</a></li>
+                <li class="has-submenu parent-menu-item">
+                    <a routerLink="/servicios" (click)="subManu('index-item')">Servicios</a><span class="menu-arrow"></span>
+                    <ul class="submenu" [ngClass]="['index-item','/index-two', '/index-three','/index-four','/index-five','/index-six','/index-seven'].includes(manuOpen) ? 'open' : ''">
+                        <li><a routerLink="/fabrica-de-software" class="sub-menu-item">Fabrica de Software</a></li>
+                        <li><a routerLink="/calidad-de-software" class="sub-menu-item">Calidad de Software</a></li>
+                        <li><a routerLink="/consultoria-y-servicios-profesionales" class="sub-menu-item">Consultoria y Servicios Profesionales</a></li>
+                        <li><a routerLink="/index-four" class="sub-menu-item">Apps</a></li>
+                        <li><a routerLink="/index-five" class="sub-menu-item">Desarrollo</a></li>
+                        <li><a routerLink="/index-six" class="sub-menu-item">Soporte TI</a></li>
+                    </ul>
+                </li>
+                <li><a routerLink="/" class="sub-menu-item">Soluciones</a></li>
+                <li><a routerLink="/" class="sub-menu-item">Clientes</a></li>
+                <li><a routerLink="/nuestro-equipo" class="sub-menu-item">Nuestro Equipo</a></li>
+
+        
+                <!-- <li><a routerLink="/contact" class="sub-menu-item">Contact</a></li> -->
+            </ul><!--end navigation menu-->
+        </div><!--end navigation-->
+    </div><!--end container-->
+</nav>

@@ -1,0 +1,63 @@
+<!-- <app-navbar [childMessage]="'true'" [navLight]="true"/> -->
+<app-navbar></app-navbar>
+
+<section class="relative mt-20 flex w-full h-[600px]">
+    <div class="flex flex-col justify-center gap-4 text-blue-950 bg-[#dfeef6] container h-full w-1/2">
+        <img src="assets/img/about-us/mg-isotipo.png" height="100" width="100" alt="Materiagris">
+        <h3 class="text-2xl">
+            SOMOS <strong>MATERIAGRIS</strong>
+        </h3>
+        <p>
+            Contamos con 9 años de experiencia brindando servicios TI para rubros como: Seguros, Telecomunicaciones, ERP RRHH. Apostamos por tecnologías de vanguardia 
+            en la creación de soluciones digitales integrales, desde MVP’s, hasta plataformas escalables, brindando experiencias altamente personalizadas.
+        </p>
+    </div>
+    <div class="bg-[#dfeef6] text-slate-400 relative w-1/2">
+        <img src="assets/img/about-us/nosotros-banner.jpg" class="w-full h-full object-cover object-center" alt="Nosotros MG">
+        <div class="absolute bg-white shadow-lg rounded-2xl w-1/2 p-6 bottom-[20px] left-[20px]"> 
+            <img src="assets/img/about-us/ico-nosotros.png" width="70" height="70" alt="" class="mb-2">
+            <span>
+                Somos tu mejor aliado en servicios de Tecnología e innovación en el rubro de seguros.
+            </span>
+        </div>
+    </div><!--end container-->
+</section><!--end section-->
+
+
+
+<!-- <div class="relative">
+    <div class="shape overflow-hidden z-1 text-white dark:text-slate-900">
+        <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
+        </svg>
+    </div>
+</div> -->
+
+<section class="relative lg:pb-24 pb-16">
+
+    <app-about/>
+
+</section>
+
+<!-- <section class="relative py-24 bg-[url('/assets/images/bg/01.jpg')] bg-no-repeat bg-center bg-fixed bg-cover">
+    <div class="absolute inset-0 bg-black/60"></div>
+    <div class="container relative">
+        <div class="grid md:grid-cols-3 grid-cols-1 items-center">
+            <div *ngFor="let item of counterData" class="counter-box text-center">
+                <h1 class="text-white lg:text-5xl text-4xl font-semibold mb-2"><span class="counter-value" [countUp]="item.target">0</span>+</h1>
+                <h5 class="counter-head text-white text-lg font-medium">{{item.name}}</h5>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<!-- <section class="relative lg:pb-24 pb-16">
+    <app-team/>
+
+    <app-client-two/>
+
+   <app-get-in-touch/>
+</section> -->
+
+<app-footer/>
+

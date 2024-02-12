@@ -1,0 +1,54 @@
+<app-navbar></app-navbar>
+
+<section class="relative mt-20 w-full h-[450px] bg-[#dfeef6]">
+    <div class="container flex items-center h-full">
+        <div class="flex">
+            <img src="" alt="">
+        </div>
+        <div class="flex flex-col gap-4">
+            <h3 class="text-2xl">
+                SERVICIOS
+            </h3>
+            <p>
+                Nuestro propósito es proveer soluciones efectivas, innovadoras y de alta tecnología dentro del ámbito local e internacional.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="relative lg:py-24 py-16">
+    <div class="container relative">
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-x-[30px] gap-y-[50px]">
+            <!-- Content -->
+            <div *ngFor="let item of servicesData" class="group flex flex-col justify-between bg-[#dfeef6] lg:p-8 transition-all duration-500 ease-in-out rounded-2xl overflow-hidden">
+                <div class="">
+                    <div class="">
+                        <img [src]="item.icon" height="60" width="60" [alt]="item.title">
+                        <!-- <i data-feather="hexagon" class="h-32 w-32 fill-green-600/5"></i>
+                        <div class="absolute top-[50%] -translate-y-[50%] start-[45px] text-green-600 rounded-xl transition-all duration-500 ease-in-out text-4xl flex align-middle justify-center items-center">
+                            <i class={{item.icon}}></i>
+                        </div> -->
+                    </div>
+    
+                    <div class="mt-6">
+                        <a href="" class="text-xl hover:text-[#a5be00] font-medium">{{item.title}}</a>
+                        <p class="text-slate-400 mt-3">{{item.desc}}</p>
+                    </div>
+                </div>
+                <div class="flex justify-end mt-6">
+                    <button class="flex justify-center items-center rounded-full h-10 w-10 bg-[#a5be00] text-white" [routerLink]="['/index']" routerLinkActive="router-link-active">
+                        <i class="uil uil-arrow-up-right mt-2"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Content -->
+        </div><!--end grid-->
+    </div><!--end container-->
+
+    <!-- <app-clients/>
+
+    <app-get-in-touch/> -->
+
+</section>
+
+<app-footer/>
