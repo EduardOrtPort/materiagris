@@ -1,7 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { AfterViewInit, Component, Input, OnInit  } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { RouterLink, Router } from '@angular/router';
 import * as feather from 'feather-icons';
+import { ContactModalComponent } from '../contact-modal/contact-modal.component';
 
 @Component({
   selector: 'app-navbar',
@@ -14,7 +16,10 @@ import * as feather from 'feather-icons';
 export class NavbarComponent implements
   OnInit, AfterViewInit {
     
-  constructor(private router : Router) { }
+  constructor(
+    private router : Router,
+    private _dialog: MatDialog,
+    ) { }
 
   ngOnInit(): void {
       console.log(this.router.url);
@@ -35,8 +40,6 @@ export class NavbarComponent implements
     this.manu = !this.manu;  
     this.manuOpen = item
     console.log(this.manuOpen);
-    
-    
   }
 
   windowScroll() {
@@ -120,5 +123,15 @@ export class NavbarComponent implements
  @Input() navLight? : boolean
 
  navLight2? : boolean = false
+
+ openContact() {
+  // let dialogRef = this._dialog.open(ContactModalComponent);
+
+  // dialogRef.afterClosed().subscribe(result => {
+  //   console.log(`Dialog result: ${result}`);
+  // });
+}
+
+ 
 
 }

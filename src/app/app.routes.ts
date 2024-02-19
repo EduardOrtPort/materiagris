@@ -28,6 +28,9 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { SoftwareFactoryComponent } from './pages/services/software-factory/software-factory.component';
 import { SoftwareQualityComponent } from './pages/services/software-quality/software-quality.component';
 import { ConsultancyandServiceComponent } from './pages/services/consultancy-services/consultancy-services.component';
+import { AppsFactoryComponent } from './pages/services/apps-service/apps-factory.component';
+import { DevelopeComponent } from './pages/services/develope/develope.component';
+import { TISupportComponent } from './pages/services/ti-support/ti-support.component';
 
 export const routes: Routes = [
     {'path':'', component:IndexComponent},
@@ -37,7 +40,9 @@ export const routes: Routes = [
     {'path':'fabrica-de-software', component:SoftwareFactoryComponent},
     {'path':'calidad-de-software', component:SoftwareQualityComponent},
     {'path':'consultoria-y-servicios-profesionales', component:ConsultancyandServiceComponent},
-    
+    {'path':'apps', component:AppsFactoryComponent},
+    {'path':'develope', component:DevelopeComponent},
+    {'path':'soporte-ti', component:TISupportComponent},
 
     {'path':'buy', component:BuyComponent},
     {'path':'sell', component:SellComponent},

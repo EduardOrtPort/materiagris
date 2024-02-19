@@ -1,0 +1,45 @@
+<app-navbar></app-navbar>
+
+<section class="relative flex justify-center items-center mt-20 w-full h-[450px] bg-[url('/assets/img/services/banner-develope.jpg')] bg-no-repeat bg-center bg-cover">
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="container relative">
+        <div class="flex items-center justify-center text-center">
+            <div class="bg-[#b5d8ea] px-4 py-1 rounded-full text-[#3d8aab] max-w-max">
+                <span>Servicios</span>
+            </div>
+            <!-- <h3 class="md:text-4xl text-3xl md:leading-normal leading-normal font-medium text-white">Find Your Dream Home</h3> -->
+        </div>
+    </div>
+</section>
+
+<div class="relative flex flex-col items-center justify-center w-full top-[-125px] gap-6">
+    <img src="assets/img/services/icon-app.png" width="250" alt="">
+</div>
+
+
+<section class="container lg:py-8 py-4 mt-[-100px]">
+    <div class="flex flex-col gap-8 items-center text-center text-gray-500 pb-6">
+        <h3 class="text-blue-950 font-semibold text-3xl md:text-4xl w-9/12 ">Desarrollo</h3>
+        <p class="w-9/12">
+            Llevamos a cabo proyectos de manera integral buscando satisfacer las necesidades específicas de nuestros clientes, contando con un equipo compuesto por desarrolladores front-end y back-end, 
+            arquitectos de software, gerentes de Cloud Computing, y otros profesionales especialistas en iOS, Android y Windows.</p>
+    </div>
+    <div class="flex flex-col items-center gap-6 py-6">
+        <h4 class="text-blue-950 text-xl md:text-2xl">VENTAJAS <strong>ESTRATÉGICAS</strong></h4>
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-x-[30px] gap-y-[50px]">
+            <div *ngFor="let item of softwareFactoryData" class="flex flex-col justify-between lg:p-6 transition-all duration-500 ease-in-out">
+                <div class="flex flex-col items-center gap-6">
+                    <img [src]="item.icon" height="150" width="150" [alt]="item.title">
+    
+                    <div class="mt-6 text-cyan-800 text-center">
+                        <a href="" class="text-xl font-medium">{{item.title}}</a>
+                        <p class="bg-[#dfeef6] mt-3 p-4 rounded-2xl transition-all overflow-hidden">{{item.desc}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<app-footer/>
