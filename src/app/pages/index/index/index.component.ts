@@ -18,8 +18,9 @@ import { tns } from 'tiny-slider';
   standalone: true,
   imports: [NavbarComponent, NgSelectModule, FormsModule, YouTubePlayerModule,CommonModule, AboutComponent, FeaturesComponent,PropertiesComponent,ClientsComponent, GetInTouchComponent,FooterComponent,SwitcherComponent],
   templateUrl: './index.component.html',
-  styleUrl: './index.component.scss'
+  styleUrl: './index.component.scss',
 })
+
 export class IndexComponent {
 
   slides = [
@@ -58,11 +59,19 @@ export class IndexComponent {
   ngOnInit() {}
 
   prevImage() {
-    this.currentSlide = this.currentSlide - 1;
+    if (this.currentSlide === 1) {
+      this.currentSlide = this.slides.length;
+    } else {
+      this.currentSlide = this.currentSlide - 1;
+    }
   }
 
   nextImage() {
-    this.currentSlide = this.currentSlide + 1;
+    if (this.currentSlide === this.slides.length) {
+      this.currentSlide = 1;
+    } else {
+      this.currentSlide = this.currentSlide + 1;
+    }
   }
 
   slider: any;

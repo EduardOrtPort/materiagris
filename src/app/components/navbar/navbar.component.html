@@ -37,7 +37,7 @@
                 <a routerLink="auth-login" class="btn btn-icon bg-green-600 hover:bg-green-700 border-green-600 dark:border-green-600 text-white rounded-full"><i data-feather="user" class="h-4 w-4 stroke-[3]"></i></a>
             </li> -->
             <li class="sm:inline ps-1 mb-0 hidden" >
-                <button (click)="openContact()" class="btn bg-[#a5be00] hover:bg-lime-600 border-[#a5be00] text-white rounded-full">Contáctanos</button>
+                <button onclick="my_modal_6.showModal()" class="btn bg-[#a5be00] hover:bg-lime-600 border-[#a5be00] text-white rounded-full">Contáctanos</button>
             </li>
         </ul>
         <!--Login button End-->
@@ -67,4 +67,20 @@
             </ul><!--end navigation menu-->
         </div><!--end navigation-->
     </div><!--end container-->
+
+    <!-- <div class="absolute bottom-2/4 translate-y-2/4 start-0 end-0 text-center">
+        <a href="javascript:void(0)" data-type="youtube" data-id="yba7hPeTSjk" 
+            class="lightbox h-20 w-20 rounded-full shadow-md dark:shadow-gyay-700 inline-flex items-center justify-center bg-white dark:bg-slate-900 text-green-600">
+            <i class="mdi mdi-play inline-flex items-center justify-center text-2xl">
+            </i>
+        </a>
+    </div> -->
+    <dialog id="my_modal_6" class="modal modal-bottom sm:modal-middle bg-white p-4 rounded-3xl">
+        <app-contact-modal></app-contact-modal>
+        <div class="modal-action absolute end-0 top-0 bg-white size-7 flex justify-center items-center rounded-full">
+            <form method="dialog" class="!leading-[0]">
+              <button ><i class="uil uil-multiply"></i></button>
+            </form>
+          </div>
+    </dialog>
 </nav>

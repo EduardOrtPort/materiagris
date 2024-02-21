@@ -1,11 +1,5 @@
-.slide {
-    width: 100%;
-    height: auto;
-    transition: opacity 0.5s ease-in-out;
-  }
-
 .slide-bg{
-    background-position: 50% 50%;
+    background-position: 50% 30%;
     background-size: cover;
 }
 
@@ -40,4 +34,22 @@
 .smart-section {
   background: rgb(255,255,255);
   background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(208,230,242,1) 40%, rgba(226,239,247,1) 60%, rgba(255,255,255,1) 100%);
+}
+
+.slide-enter {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 250ms ease-in;
+  height: 700px;
+  width: 100%;
+  padding: 1.5rem;
+}
+
+.slide-leave {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 250ms ease-out;
+  height: 0px;
+  width: 0px;
+  padding: 0px;
 }

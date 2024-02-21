@@ -1,10 +1,10 @@
 <app-navbar></app-navbar>
 
 <section class="relative mt-20">
-    <div class="flex items-center h-[700px] slide-bg p-6" 
-        *ngFor="let slide of slides" 
+    <div class="flex items-center slide-bg"
+        *ngFor="let slide of slides; let i = index" 
         [style]="'background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('+slide.background+')'" 
-        [class]="slide.id !== currentSlide ? 'hidden' : ''">
+        [class]="slide.id !== currentSlide ? 'slide-leave' : 'slide-enter'">
         <div class="w-full justify-between flex container">
             <div class="flex flex-col max-w-[60%]">
                 <h3 class="slide-title" *ngIf="slide.title">

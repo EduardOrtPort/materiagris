@@ -28,9 +28,9 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { SoftwareFactoryComponent } from './pages/services/software-factory/software-factory.component';
 import { SoftwareQualityComponent } from './pages/services/software-quality/software-quality.component';
 import { ConsultancyandServiceComponent } from './pages/services/consultancy-services/consultancy-services.component';
-import { AppsFactoryComponent } from './pages/services/apps-service/apps-factory.component';
 import { DevelopeComponent } from './pages/services/develope/develope.component';
 import { TISupportComponent } from './pages/services/ti-support/ti-support.component';
+import { AppsFactoryComponent } from './pages/services/apps-factory/apps-factory.component';
 
 export const routes: Routes = [
     {'path':'', component:IndexComponent},
