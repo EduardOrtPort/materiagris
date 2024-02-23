@@ -12,7 +12,6 @@ import { FooterComponent } from '../../../components/footer/footer.component';
 import { SwitcherComponent } from '../../../components/switcher/switcher.component';
 import { GetInTouchComponent } from '../../../components/get-in-tuch/get-in-touch.component';
 import { tns } from 'tiny-slider';
-import { WhatsappPopupComponent } from '../../../components/whatsapp-popup/whatsapp-popup.component';
 import { ClientsSayComponent } from '../../../components/client-say/clients-say.component';
 
 @Component({
@@ -31,7 +30,6 @@ import { ClientsSayComponent } from '../../../components/client-say/clients-say.
     GetInTouchComponent,
     FooterComponent,
     SwitcherComponent,
-    WhatsappPopupComponent,
     ClientsSayComponent
   ],
   templateUrl: './index.component.html',
