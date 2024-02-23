@@ -1,0 +1,34 @@
+.message-bubble {
+
+    margin-left: 10px;
+    max-width: 70%;
+    background-color: #f3f3f3;
+    padding: 8px;
+    border-radius: 0 10px 10px 10px;
+    position: relative;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  }
+
+  .message-bubble::before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-right: 10px solid #f3f3f3;
+    border-top: 10px solid #f3f3f3;
+    border-bottom: 10px solid transparent;
+    left: -12px;
+    top: 0px; /* Color del triángulo */
+  }
+
+  .hint-help {
+    display: none;
+  }
+
+  .wp-button-section:hover {
+    .hint-help {
+        display: block;
+    }
+  }
+  
