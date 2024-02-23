@@ -95,11 +95,14 @@
 
 <section class="container">
     <div class="service-section rounded-3xl p-4 md:p-8 text-white flex items-center flex-col">
-        <h4 class="text-2xl">¿Qué dicen <strong>nuestros clientes</strong>?</h4>
-        <p>Facilitamos el dia a dia de pérsonas y empresas mediante la creacion de tecnología web y móvil.</p>
+        <div class="container flex items-center flex-col">
+            <h4 class="text-2xl">¿Qué dicen <strong>nuestros clientes</strong>?</h4>
+            <p>Facilitamos el dia a dia de pérsonas y empresas mediante la creacion de tecnología web y móvil.</p>
+        </div>
 
         <div class="flex justify-center relative mt-4">
-            <div class="relative lg:w-1/3 md:w-1/2 w-full">
+            <div class="relative w-full">
+                <app-clients-say></app-clients-say>
     
                 <!-- <div class="tiny-single-item">
                     <div *ngFor="let item of clientData" class="tiny-slide bg-white">
@@ -173,6 +176,11 @@
         </div>
     </div>
 </section>
+
+
+
+<app-whatsapp-popup>
+</app-whatsapp-popup>
 
 <app-footer></app-footer>
 <!-- <app-switcher></app-switcher> -->

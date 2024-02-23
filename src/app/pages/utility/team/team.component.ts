@@ -3,11 +3,12 @@ import { Component } from '@angular/core';
 import { NavbarComponent } from '../../../components/navbar/navbar.component';
 import { FooterComponent } from '../../../components/footer/footer.component';
 import { RouterLink } from '@angular/router';
+import { NgxOrgChartModule } from '@tots/ngx-org-chart';
 
 @Component({
   selector: 'app-team',
   standalone: true,
-  imports: [CommonModule, NavbarComponent, FooterComponent, RouterLink],
+  imports: [CommonModule, NavbarComponent, FooterComponent, RouterLink, NgxOrgChartModule ],
   templateUrl: './team.component.html',
   styleUrl: './team.component.scss'
 })
@@ -43,5 +44,121 @@ export class TeamComponent {
       title:'Analista de Mesa de Ayuda',
       desc:'Proporcionan soporte técnico a los usuarios finales. Resuelven problemas, responden preguntas y ofrecen asistencia técnica.'
     },
-  ]
+  ];
+
+
+
+  nodes: any = [
+    {
+      name: 'Director de Proyectos',
+      cssClass: 'ngx-org-ceo',
+      image: 'https://www.w3schools.com/howto/img_avatar.png',
+      // title: 'Chief Executive Officer',
+      childs: [
+        {
+          name: 'Lider de Equipo de Desarrollo',
+          cssClass: 'ngx-org-ceo',
+          image: 'https://www.w3schools.com/howto/img_avatar.png',
+          //title: 'CEO, Google Cloud',
+          childs: [
+            {
+              name: 'Analista de Sistemas',
+              cssClass: 'ngx-org-ceo',
+              image: 'https://www.w3schools.com/howto/img_avatar.png',
+              //title: 'CEO, Google Cloud',
+              childs: [
+                {
+                  name: 'Analista Programador',
+                  cssClass: 'ngx-org-ceo',
+                  image: 'https://www.w3schools.com/howto/img_avatar.png',
+                  //title: 'CEO, Google Cloud',
+                  childs: [
+                    {
+                      name: 'Programador',
+                      cssClass: 'ngx-org-ceo',
+                      image: 'https://www.w3schools.com/howto/img_avatar.png',
+                      //title: 'CEO, Google Cloud',
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          name: 'Lider de Equipo de Calidad',
+          cssClass: 'ngx-org-ceo',
+          image: 'https://www.w3schools.com/howto/img_avatar.png',
+          //title: 'CEO, YouTube',
+          childs: [
+            {
+              name: 'Analista Funcional',
+              cssClass: 'ngx-org-head',
+              image: 'https://www.w3schools.com/howto/img_avatar.png',
+              //title: 'Global Head of Business Operations',
+              childs: []
+            },
+            {
+              name: 'Analista de Calidad',
+              cssClass: 'ngx-org-vp',
+              image: 'https://www.w3schools.com/howto/img_avatar.png',
+              //title: 'VP, Agency and Brand Solutions',
+              childs: []
+            }
+          ]
+        },
+        {
+          name: 'Lider de Equipo de Infraestructura y experiencia de Usuario',
+          cssClass: 'ngx-org-head',
+          image: 'https://www.w3schools.com/howto/img_avatar.png',
+          //title: 'Head of Artificial Intelligence',
+          childs: [
+            {
+              name: 'Analista de Soporte e Infraestructura',
+              cssClass: 'ngx-org-ceo',
+              image: 'https://www.w3schools.com/howto/img_avatar.png',
+              //title: 'CEO, Google Health',
+              childs: []
+            },
+            {
+              name: 'Analista de Arquitectura de SOftware',
+              cssClass: 'ngx-org-head',
+              image: 'https://www.w3schools.com/howto/img_avatar.png',
+              //title: 'Global Head of Business Operations',
+              childs: []
+            },
+            {
+              name: 'Analista UX/UI',
+              cssClass: 'ngx-org-vp',
+              image: 'https://www.w3schools.com/howto/img_avatar.png',
+              //title: 'VP, Agency and Brand Solutions',
+              childs: [
+                {
+                  name: 'Diseñador UX/UI',
+                  cssClass: 'ngx-org-vp',
+                  image: 'https://www.w3schools.com/howto/img_avatar.png',
+                  //title: 'VP, Agency and Brand Solutions',
+                }
+              ]
+            }
+          ]
+        },
+        {
+          name: 'Lider de Equipo de Soporte',
+          cssClass: 'ngx-org-head',
+          image: 'https://www.w3schools.com/howto/img_avatar.png',
+          //title: 'Head of Artificial Intelligence',
+          childs: [
+            {
+              name: 'Analista de Soporte de Aplicaciones',
+              cssClass: 'ngx-org-ceo',
+              image: 'https://www.w3schools.com/howto/img_avatar.png',
+              title: 'CEO, Google Health',
+              childs: []
+            }
+          ]
+        }
+      ]
+    }
+  ];
 }
