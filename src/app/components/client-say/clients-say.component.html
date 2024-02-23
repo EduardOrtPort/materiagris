@@ -1,0 +1,21 @@
+<div class="relative text-gray-400">
+    <div class="grid grid-cols-1 mt-8 relative">
+        <div class="tiny-home-slide-three">
+            <div *ngFor="let item of clientlist" class="tiny-slide">
+                <div class="group rounded-3xl bg-white dark:bg-slate-900 shadow hover:shadow-md dark:hover:shadow-md dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500 m-3">
+                    <div class="p-6 flex flex-col items-center text-center gap-4">
+
+                        <p class="text-lg font-medium">{{item.desc}}</p>
+
+                        <div class="text-center">
+                            <span class="">- {{item.name}}</span><br>
+
+                            <span class="font-semibold">{{item.company}}</span>
+                        </div>
+
+                    </div>
+                </div><!--end property content-->
+            </div>
+        </div>
+    </div><!--en grid-->
+</div>
